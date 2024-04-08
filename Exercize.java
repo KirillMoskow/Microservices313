@@ -53,15 +53,20 @@ public class Exercize{
         return result.toString();
     }
     private static boolean isValidNumber(String number){
-        try {
-            Integer.parseInt(number);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
+        Boolean valid = false;
+        if (Integer.parseInt(number) >= 1 && Integer.parseInt(number) <= 10) {
+            try {
+                Integer.parseInt(number);
+                valid = true;
+            } catch (NumberFormatException e) {
+
+            }  
         }
+        return valid;
+        
     }
     private static boolean isValidOperation(String operator){
-        if( operator == "+" || operator == "-" || operator == "*" || operator == "/"){
+        if(operator == "+" || operator == "-" || operator == "*" || operator == "/"){
             return true;
         }else{
             return false;
