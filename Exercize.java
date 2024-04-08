@@ -53,16 +53,12 @@ public class Exercize{
         return result.toString();
     }
     private static boolean isValidNumber(String number){
-        Boolean valid = false;
-        if (Integer.parseInt(number) >= 1 && Integer.parseInt(number) <= 10) {
-            try {
-                Integer.parseInt(number);
-                valid = true;
-            } catch (NumberFormatException e) {
-
-            }  
+        try {
+            int num = Integer.parseInt(number);
+            return num >= 1 && num < 10;
+        } catch (Exception e) {
+            return false;
         }
-        return valid;
         
     }
     private static boolean isValidOperation(String operator){
