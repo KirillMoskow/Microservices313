@@ -45,7 +45,7 @@ public class Exercize{
                 result = a.multiply(b);
                 break;   
             case "/":
-                result = a.divide(b,3,RoundingMode.FLOOR);
+                result = a.divide(b,RoundingMode.FLOOR);
                 break;
             default:
                 throw new IllegalArgumentException("Неверный знак или формат");
